@@ -1,0 +1,35 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	background-color: #f6f5ec;
+}
+
+
+header{
+	height: 90px;
+	width: 960px;
+	margin: 0 auto;
+	background-color: #d1c7b7;
+}
+
+
+nav{
+	height: 50px;
+	width: 960px;
+	background-color: #f2eada;
+	margin: 0 auto;
+	line-height: 50px
+}
+
+nav a {
+	text-decoration: none;
+}
+
+#banner{
+
+	width: 1920px;
+	height: 560px;
+	background-color: #fffef9;
+
+}
