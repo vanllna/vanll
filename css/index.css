@@ -107,6 +107,27 @@ footer{
 	float: left;
 }
 
+#footnav{
+		width: 360px;
+		height: 120px;
+		background-color: rgba(0,0,0,0);
+		float: left;
+		margin-left: 500px;
+}
+
+#footnav li{
+	background-color: #585858;
+	display: block;
+}
+
+#footnav a{
+	
+	text-decoration: none;
+	background-color: rgba(0,0,0,0);
+	color: white;
+
+}
+
 .preview {
 			width: 360px;
 			height:90px;
