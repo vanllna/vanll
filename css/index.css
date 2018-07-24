@@ -74,7 +74,7 @@ nav a {
 #main{
 	width: 960px;
 	height: 240px;
-	margin-left: 500px;
+	margin-left: 300px;
 	float: left;
 
 }
@@ -100,8 +100,8 @@ nav a {
 }
 
 footer{
-	width: 1920px;
-	height: 120px;
+	width: 100%;
+	height: 140px;
 	background-color: #585858;
 	margin-top: 30px;
 	float: left;
@@ -112,7 +112,10 @@ footer{
 		height: 120px;
 		background-color: rgba(0,0,0,0);
 		float: left;
-		margin-left: 500px;
+		margin-left: 300px;
+}
+#footnav ul{
+	margin-top: 20px;
 }
 
 #footnav li{
@@ -125,7 +128,37 @@ footer{
 	text-decoration: none;
 	background-color: rgba(0,0,0,0);
 	color: white;
+	font-size: 12px;
 
+}
+
+#footqrcode{
+	margin-top: 20px;
+}
+
+#footqrcode img{
+	height: 80px;
+	width: 100px;
+	float: left;
+	margin-left:20px;
+	background-color: rgba(0,0,0,0);
+
+}
+
+#imgright{
+	float: left;
+	margin-top: 95px;
+	margin-left:-70px;
+	background-color: rgba(0,0,0,0);
+	color: white;
+}
+
+#imgleft{
+	float: left;
+	margin-top: 95px;
+	margin-left:-70px;
+	background-color: rgba(0,0,0,0);
+	color: white;
 }
 
 .preview {
