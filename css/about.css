@@ -1,0 +1,23 @@
+#abouttitle{
+    float: left;
+    margin-left: 700px;
+}
+
+.aboutus{
+    width: 230px;
+    height: 230px;
+    background-color: lightcoral;
+    margin-top: 60px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 230px;
+    color: white;
+}
+
+#maincontact {
+    float: left;
+    margin-left: 280px;
+
+}
