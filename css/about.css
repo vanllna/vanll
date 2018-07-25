@@ -16,6 +16,11 @@
     color: white;
 }
 
+.aboutus:hover{
+    background-color: dodgerblue;
+
+}
+
 #maincontact {
     float: left;
     margin-left: 280px;
