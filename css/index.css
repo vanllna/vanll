@@ -120,7 +120,7 @@ nav a {
 
 footer{
 	width: 100%;
-	height: 140px;
+	height: 160px;
 	background-color: #585858;
 	margin-top: 30px;
 	float: left;
@@ -170,6 +170,7 @@ footer{
 	margin-left:-70px;
 	background-color: rgba(0,0,0,0);
 	color: white;
+	font-size: 14px;
 }
 
 #imgleft{
@@ -178,6 +179,7 @@ footer{
 	margin-left:-70px;
 	background-color: rgba(0,0,0,0);
 	color: white;
+	font-size: 14px;
 }
 
 .preview {
