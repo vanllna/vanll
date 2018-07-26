@@ -1,0 +1,17 @@
+#culture{
+    float: left;
+    margin-left: 300px;
+    width: 960px;
+    height: 100%;
+}
+
+#culture img{
+    width: 960px;
+    height: 360px;
+    margin: auto;
+}
+
+#culture h1{
+    color: red;
+    text-align: center;
+}
