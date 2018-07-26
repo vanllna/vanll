@@ -1,0 +1,21 @@
+#newpage {
+    width: 960px;
+    height: 360px;
+    float: left;
+    margin-left: 300px;
+}
+
+#newpage ul li{
+    list-style: none;
+}
+#newpage ul li h2{
+    color: red;
+}
+
+.newtitle{
+    margin-top: 20px;
+}
+
+#newpage ul li a{
+    text-decoration: none;
+}

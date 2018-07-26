@@ -1,0 +1,35 @@
+#teamimg{
+    float: left;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+
+
+.teamlist{
+    width: 320px;
+    height: 300px;
+    background-color: white;
+    margin-right: 20px;
+    float: left;
+    margin-top: 20px;
+}
+
+#teamimg img{
+    width:320px;
+    height: 210px;
+    margin-bottom: 10px;
+}
+
+#teamimg p{
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,0);
+}
+
+#xian{
+    width: 20px;
+    height: 5px;
+    background-color: red;
+
+    margin: auto;
+}
