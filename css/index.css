@@ -2,26 +2,33 @@
 *{
 	margin: 0;
 	padding: 0;
-	background-color: #f6f5ec;
+	background-color: white;
 }
 
 
-html body{
+html{
 	height: 100%
 	width:100%;
 }
 
+body {
+	height: 100%;
+	width: 100%;
+
+}
+
 header{
 	height: 90px;
-	width: 960px;
-	margin: 0 auto;
-	background-color: #d1c7b7;
+	width: 100%px;
+	margin-left: 300px;
+	background-color: white;
 }
 
 #logo{
 	width: 120px;
 	height: 90px;
 	float: left;
+	margin:  0 auto;
 	background-color: rgba(0,0,0,0);
 }
 
@@ -40,17 +47,20 @@ header{
 
 nav{
 	height: 50px;
-	width: 960px;
-	background-color: #EFF5FB;
-	margin: 0 auto;
+	width: 100%;
+	background-color: lightblue;
+	/*margin: 0 auto;*/
 	line-height: 50px;
+	/*margin-top: 5px;*/
 
 }
 
 nav ul{
-	margin-right: 100px;
+	float: left;
+	margin-left: 300px;
 	width: 960px;
 	text-align: center;
+	background-color: lightblue;
 
 }
 
@@ -59,13 +69,14 @@ nav ul li{
 	width: 160px;
 	height: 50px;
 	float: left;
-
+	background-color: lightblue;
 
 }
 
 nav a {
 	text-decoration: none;
-	color: #2E2E2E;
+	color: white;
+	background-color: rgba(0,0,0,0);
 }
 
 #banner{
@@ -145,7 +156,7 @@ footer{
 }
 
 #footnav{
-		width: 360px;
+		width: 460px;
 		height: 120px;
 		background-color: rgba(0,0,0,0);
 		float: left;
@@ -153,11 +164,13 @@ footer{
 }
 #footnav ul{
 	margin-top: 20px;
+	background-color: rgba(0,0,0,0);
 }
 
 #footnav li{
-	background-color: #585858;
-	display: block;
+	background-color: rgba(0,0,0,0);
+	display: inline;
+	margin-left: 20px;
 }
 
 #footnav a{
