@@ -1,14 +1,16 @@
 #culture{
     float: left;
-    margin-left: 300px;
+    margin: auto;
     width: 960px;
-    height: 100%;
+    /*height: 100%;*/
 }
 
 #culture img{
     width: 960px;
     height: 360px;
-    margin: auto;
+   	margin: auto;
+    float: left;
+
 }
 
 #culture h1{
