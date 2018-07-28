@@ -1,7 +1,10 @@
+
 #teamimg{
     float: left;
     margin-left: 300px;
     margin-top: 30px;
+    /*width: 100%;*/
+    /*background-color: gainsboro;*/
 }
 
 
@@ -12,7 +15,10 @@
     margin-right: 20px;
     float: left;
     margin-top: 20px;
+    border: 1px solid gainsboro;
 }
+
+
 
 #teamimg img{
     width:320px;
