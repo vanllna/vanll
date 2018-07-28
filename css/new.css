@@ -2,8 +2,9 @@
 #new {
     width: 960px;
     height: 360px;
-    float: left;
+    /*float: left;*/
     margin-left: 300px;
+    margin-bottom: 10px;
 }
 
 .info{
@@ -18,13 +19,15 @@
 
 .titletrans{
     background-color: rgba(0,0,0,0);
+    color: red;
 
 }
 
 .trans{
     background-color: rgba(0,0,0,0);
-    border: 1px solid red;
-
+    border: 1.2px solid red;
+    margin-top: 5px;
+    width: 30px;
 }
 
 .nweart{
@@ -46,16 +49,20 @@
 #new ul li{
     list-style: none;
 }
-#new ul li h2{
-    color: red;
-}
 
 .newtitle{
     margin-top: 20px;
     float: left;
-    margin-bottom: 2px;
+    /*margin-bottom: 2px;*/
+}
+
+.newtitle:hover{
+    box-shadow: 25px 5px 10px lavender;
 }
 
 #new ul li a{
     text-decoration: none;
 }
+
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}
