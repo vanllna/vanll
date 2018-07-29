@@ -10,10 +10,15 @@
     height: 360px;
    	margin: auto;
     float: left;
+    margin-bottom: 20px;
 
 }
 
 #culture h1{
     color: red;
     text-align: center;
+}
+
+#culture p{
+    margin-bottom: 10px;
 }
