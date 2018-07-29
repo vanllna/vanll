@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/flexslider.css" />
 	<link rel="stylesheet" href="css/demo.css" />
+	<link rel="stylesheet" href="css/swiper.css"
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 </head>
@@ -85,8 +86,31 @@
 				<a href="#" class="newpage"><li>aaaaaaaaaaaaaaaaaaaaaaaaaaaa</li></a>
 			</ul>
 		</div>
+
 		<div id="leftmain">
-			<div id="infocontion"><img src="img/full/1.jpg"></div>
+			<div class="swiper-container gallery-top">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image: url(img/ad/1.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(img/ad/2.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(img/ad/3.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(img/ad/4.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(img/ad/5.jpg)"></div>
+
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next swiper-button-white"></div>
+				<div class="swiper-button-prev swiper-button-white"></div>
+			</div>
+			<div class="swiper-container gallery-thumbs">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image:url(img/adfull/1.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(img/adfull/2.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(img/adfull/3.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(img/adfull/4.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(img/adfull/5.jpg)"></div>
+
+				</div>
+			</div>
 
 		</div>
 
@@ -115,10 +139,32 @@
 </body>
 
 <script src="js/jquery.js"></script>
+<script src="js/swiper.js"></script>
 <!-- <script type="text/javascript" src="http://www.queness.com/js/bsa2.js"></script> -->
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/demo.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script>
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 5,
+        loop:true,
+        loopedSlides: 5, //looped slides should be the same
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 5,
+        slidesPerView: 5,
+        touchRatio: 0.2,
+        loop: true,
+        loopedSlides: 5, //looped slides should be the same
+        slideToClickedSlide: true,
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
 
+</script>
 
 </html>
