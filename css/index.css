@@ -126,7 +126,7 @@ nav a {
 
 #lefttitle a{
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 #rigthtitle{
@@ -139,13 +139,26 @@ nav a {
 	float: left;
 	display:inline-block;
 	color: #2E2E2E;
+	font-size: 12px;
+	line-height: 30px;
 
 }
 
-#main li:hover{
-	background-color: #F8ECE0;
+.newpage p{
+
+	float: left;
+	margin-left: -50px;
+	font-size: 12px;
+	line-height: 30px;
+	text-decoration: none;
 
 }
+
+
+#rightmain li:hover{
+	color: red;
+}
+
 
 footer{
 	width: 100%;
@@ -328,3 +341,57 @@ footer{
 .gallery-thumbs .swiper-slide-active {
 	opacity: 1;
 }
+
+
+#aboutus{
+
+	width: 1200px;
+	height: 360px;
+}
+
+
+.abouttitle{
+	float: left;
+	margin-left: 300px;
+}
+
+.aboutart{
+	float: left;
+	margin-left: 300px;
+	margin-top: 20px;
+	font-size: 16px;
+	color: red;
+}
+
+.aboutinfo{
+	float: left;
+	margin-left: 300px;
+	margin-top: 16px;
+}
+
+
+.aboutbutton{
+	float: left;
+	margin-bottom: 40px;
+	margin-top: 20px;
+	width: 100px;
+	height: 30px;
+	background-color: #f0f0f0;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+#buttonright{
+	margin-left: 300px;
+}
+
+#buttonleft{
+	margin-left: 20px;
+}
+
+.aboutbutton:hover{
+	background-color: red;
+	color: white;
+}
+
