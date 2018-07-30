@@ -96,17 +96,12 @@ nav a {
 }
 
 #rightmain{
-	width: 460px;
-	height: 360px;
+	width: 960px;
+	height: 100%;
 	float: left;
 
 }
 
-#leftmain{
-	width: 320px;
-	height: 220px;
-	float: left;
-}
 
 #infocontion img{
 	width: 420px;
@@ -118,19 +113,19 @@ nav a {
 	margin-top: 10px;
 }
 
-#lefttitle{
-	float: left;
-	margin-left: 300px;
-
-}
-
-#lefttitle a{
-	text-decoration: none;
-	font-size: 16px;
-}
-
 #rigthtitle{
 	float: left;
+	color: red;
+	/*margin-left: 360px;*/
+	font-size: 20px;
+}
+
+.newart{
+	margin-top: 20px;
+	width: 960px;
+	height: 100%;
+
+
 }
 
 #main li{
@@ -144,21 +139,78 @@ nav a {
 
 }
 
-.newpage p{
-
+.newpage{
 	float: left;
-	margin-left: -50px;
-	font-size: 12px;
-	line-height: 30px;
-	text-decoration: none;
+	width: 960px;
+	height: 100px;
+	padding: 10px;
+	background-color: #E6E5E5;
+	margin-top: 10px;
 
 }
+.newpage:hover{
+	box-shadow: 5px 5px 3px gainsboro;
+	background-color: gainsboro;
+	color: #E6E5E5;
+}
 
+.newpage  h4{
+	float: left;
+	line-height: 30px;
+	text-decoration: none;
+	color: red;
+	background-color: rgba(0,0,0,0);
+
+}
+.newpage p{
+	float: left;
+	text-decoration: none;
+	font-size: 12px;
+	background-color: rgba(0,0,0,0);
+	color: #3C3B3B;
+}
+
+..newpage p:hover{
+	color: red;
+}
+
+.newtime{
+	margin-left: 560px;
+	margin-top: 5px;
+}
+
+.newinfo{
+	width: 940px;
+	margin-top: 15px;
+}
+.newinfo:hover{
+	color: red;
+}
 
 #rightmain li:hover{
 	color: red;
 }
 
+
+
+#leftmain{
+	width: 100%;
+	height: 520px;
+	float: left;
+}
+
+
+
+#lefttitle{
+	float: left;
+	margin-left: 300px;
+
+}
+
+#lefttitle a{
+	text-decoration: none;
+	font-size: 16px;
+}
 
 footer{
 	width: 100%;
@@ -415,6 +467,7 @@ footer{
 .anim_emt{
 	margin-left: 360px;
 	background-color: rgba(0,0,0,0);
+	color: red;
 }
 
 /*.wrap{*/
@@ -445,13 +498,14 @@ footer{
 
 .projecttitle{
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 14px;
 	margin-bottom: 5px;
 }
 
 .clearfix h6{
 	text-align: center;
-	margin-top: 2px;
+	margin-top: 4px;
+
 }
 
 .trans{
