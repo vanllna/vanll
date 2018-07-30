@@ -124,8 +124,12 @@ nav a {
 	margin-top: 20px;
 	width: 960px;
 	height: 100%;
+}
 
-
+.newart h2{
+	color: red;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 #main li{
@@ -144,13 +148,13 @@ nav a {
 	width: 960px;
 	height: 100px;
 	padding: 10px;
-	background-color: #E6E5E5;
+	background-color: ghostwhite;
 	margin-top: 10px;
 
 }
 .newpage:hover{
 	box-shadow: 5px 5px 3px gainsboro;
-	background-color: gainsboro;
+	background-color: lightcyan;
 	color: #E6E5E5;
 }
 
@@ -183,9 +187,6 @@ nav a {
 	width: 940px;
 	margin-top: 15px;
 }
-.newinfo:hover{
-	color: red;
-}
 
 #rightmain li:hover{
 	color: red;
@@ -197,6 +198,7 @@ nav a {
 	width: 100%;
 	height: 520px;
 	float: left;
+	margin-top: 160px;
 }
 
 

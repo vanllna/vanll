@@ -4,16 +4,13 @@
 	<meta charset="utf-8">
 	<title>abot us</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/normalize.css" />
-	<link rel="stylesheet" href="css/flexslider.css" />
-	<link rel="stylesheet" href="css/demo.css" />
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-	   <header>
+    <header>
         <div id="logo"><img src="img/1.jpg"></div>
         <div id='headtitile'>测试网站</div>
     </header>
@@ -27,18 +24,18 @@
             <li><a href="contact.html">联系</a></li>
         </ul>
     </nav>
-       
-    <div id="topimg">
-        <img src="img/full/1.jpg">
-        <h2>COMPANY INTRODUCTION</h2>
-        <p>公司简介</p>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/ad/1.jpg"></div>
+            <div class="swiper-slide"><img src="img/ad/2.jpg"></div>
+            <div class="swiper-slide"><img src="img/ad/3.jpg"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
 
-   
-
-
     <main>
-
         <div id="abouttitle"><h2>about us</h2></div>
         <div id="maincontact">
             <div class="aboutus"><img src="img/web/address.png"></div>
@@ -51,12 +48,6 @@
             <h5 class="trans">咨询</h5>
 
         </div>
-
-
-
-
-
-
     </main>
 
 
@@ -82,9 +73,22 @@
 
 
 </body>
-	<script src="js/jquery.js"></script>
-	<!-- <script type="text/javascript" src="http://www.queness.com/js/bsa2.js"></script> -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<script src="js/demo.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 10,
+        mousewheel: true,
+        loop:true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    </script>
+
 </html>
