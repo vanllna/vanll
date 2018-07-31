@@ -9,13 +9,14 @@
 
 .article{
     float: left;
-    margin-left: 300px;
+    margin-left: 420px;
     margin-top: 30px;
 }
 
 .article p{
     width: 960px;
     margin-top: 14px;
+    font-size: 13px;
 }
 
 .anniu{
