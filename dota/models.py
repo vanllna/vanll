@@ -100,7 +100,20 @@ class IndexBanner(models.Model):
     class Meta:
         verbose_name_plural = u'首页广告'
 
+KIND_CHOICES = (
+    ('python','python'),
+    ('php','php'),
+    ('java','java'),
+    ('c#','c#'),
+)
 
 
+class MomentModel(models.Model):
+    content = models.CharField(max_length=120)
+    username = models.CharField(max_length=120,default='None')
+    kind_choices = models.CharField(max_length=120,choices=KIND_CHOICES,default=KIND_CHOICES[0])
+
+    class Meta:
+        verbose_name_plural = u'用户表单'
 
 

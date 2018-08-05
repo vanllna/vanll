@@ -93,6 +93,11 @@ class IndexBannerAdmin(admin.ModelAdmin):
         }),
     )
 
+class MomentModelAdmin(admin.ModelAdmin):
+    list_display = ('pk','content','username','kind_choices')
+
+
+
 admin.site.register(IndexModels,Indexinfo)
 admin.site.register(BanerImg,BanerImgAdmin)
 admin.site.register(Footinfo,FootinfoAdmin)
@@ -102,3 +107,4 @@ admin.site.register(AboutDetail,AboutAdmin)
 admin.site.register(CultuerDetaul,CultureDetailAdmin)
 admin.site.register(ContactDetail,ContactDetailAdmin)
 admin.site.register(IndexBanner,IndexBannerAdmin)
+admin.site.register(MomentModel,MomentModelAdmin)

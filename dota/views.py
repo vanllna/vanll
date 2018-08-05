@@ -1,6 +1,7 @@
 from django.shortcuts import render , HttpResponse
 from .models import *
-
+from .forms import Moment
+from django.http import HttpResponseRedirect
 # Create your views here.
 
 def Index(request):
@@ -35,3 +36,13 @@ def Contact(request):
     # print(indexlist)
     return render(request,'dota/contact.html',{'contactlist':contactlist})
 
+def MomentViews(request):
+    if request.method == 'POST':
+        form = Moment(request.POST)
+        if form.is_valid():
+            moment = form.save()
+            moment.save()
+            return HttpResponseRedirect('/index/')
+    else:
+        form = Moment()
+        return render(request,'dota/form.html',{'form':form})

@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^team/$', views.Teaminfodetail),
     url(r'^culture/$', views.Curlture),
     url(r'^contact/$', views.Contact),
+    url(r'^form/$',views.MomentViews),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
