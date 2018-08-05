@@ -3,29 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<title>index</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/normalize.css" />
-	<link rel="stylesheet" href="css/flexslider.css" />
-	<link rel="stylesheet" href="css/demo.css" />
-	<link rel="stylesheet" href="css/swiper.css"
+	<link rel="stylesheet" href="/static/css/normalize.css" />
+	<link rel="stylesheet" href="/static/css/flexslider.css" />
+	<link rel="stylesheet" href="/static/css/demo.css" />
+	<link rel="stylesheet" href="/static/css/swiper.css"
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 </head>
 <body>
 
 	<header>
-		<div id="logo"><img src="img/1.jpg"></div>
-		<div id='headtitile'>测试网站</div>
+		{% for indexinfo in indexlist %}
+		<div id="logo"><img src="{{indexinfo.logo.url}}"></div>
+		<div id='headtitile'>{{indexinfo.title}}</div>
+		{% endfor %}
 	</header>
 	<nav id="nav">
 		<ul>
-			<li><a href="index.html">首页</a></li>
-			<li><a href="about.html">我们</a></li>
-			<li><a href="new.html">动态</a></li>
-			<li><a href="team.html">团队</a></li>
-			<li><a href="culture.html">文化</a></li>
-			<li><a href="contact.html">联系</a></li>
+			<li><a href="/index">首页</a></li>
+			<li><a href="/about">我们</a></li>
+			<li><a href="/new">动态</a></li>
+			<li><a href="/team">团队</a></li>
+			<li><a href="/culture">文化</a></li>
+			<li><a href="/contact">联系</a></li>
 		</ul>
 	</nav>
 
@@ -33,27 +35,29 @@
 		
 	<div id="hero">
 		<div class="flexslider">
+			{% for banlist in bannerlist %}
 			<div id="info">
-				<h1>Arrow Navigation Styles</h1>
-				<p>this is banner</p>
+				<h1>{{banlist.bannertext}}</h1>
+				<p>{{banlist.bannerdetail}}</p>
 			</div>
 		 	<ul class="slides">
 		    	<li>
-					<img src="img/full/5.jpg" alt="icy Mountain" data-thumbnail="img/thumbnail/5.jpg" />	
+					<img src="{{banlist.banner_a.url}}" alt="icy Mountain" data-thumbnail="{{banlist.banner_a_xiao.url}}" />
 				</li>		
 		 		<li>
-					<img src="img/full/3.jpg" alt="Stoney Creek" data-thumbnail="img/thumbnail/3.jpg" />	
+					<img src="{{banlist.banner_b.url}}" alt="Stoney Creek" data-thumbnail="{{banlist.banner_b_xiao.url}}" />
 				</li>
 		    	<li>
-					<img src="img/full/2.jpg" alt="Narrow Road" data-thumbnail="img/thumbnail/2.jpg" />	
+					<img src="{{banlist.banner_c.url}}" alt="Narrow Road" data-thumbnail="{{banlist.banner_c_xiao.url}}" />
 				</li>						 		
 		    	<li>
-					<img src="img/full/1.jpg" alt="Grey Sky" data-thumbnail="img/thumbnail/1.jpg"/>	
+					<img src="{{banlist.banner_d.url}}" alt="Grey Sky" data-thumbnail="{{banlist.banner_d_xiao.url}}"/>
 				</li>		
 		    	<li>
-					<img src="img/full/4.jpg" alt="Wood Pattern" data-thumbnail="img/thumbnail/4.jpg" />	
+					<img src="{{banlist.banner_e.url}}" alt="Wood Pattern" data-thumbnail="{{banlist.banner_e_xiao.url}}" />
 				</li>
 			</ul>
+			{% endfor %}
 		</div>
 	</div>	
 	<section>
@@ -78,7 +82,7 @@
 
 				<li>
 					<a class="box_shadow" href="#">
-					<img src="img/adfull/1.jpg">
+					<img src="/static/img/adfull/1.jpg">
 					<div class="projecttitle">架构移动终端网站</div>
 					<h6>Swiper开源</h6>
 					<h6>触屏焦点图</h6>
@@ -90,7 +94,7 @@
 			<ul class="clearfix">
 				<li>
 					<a class="box_shadow" href="#">
-						<img src="img/adfull/1.jpg">
+						<img src="/static/img/adfull/1.jpg">
 						<div class="projecttitle">架构移动终端网站</div>
 						<h6>Swiper开源</h6>
 						<h6>触屏焦点图</h6>
@@ -101,7 +105,7 @@
 			<ul class="clearfix">
 				<li>
 					<a class="box_shadow" href="#">
-						<img src="img/adfull/1.jpg">
+						<img src="/static/img/adfull/1.jpg">
 						<div class="projecttitle">架构移动终端网站</div>
 						<h6>Swiper开源</h6>
 						<h6>触屏焦点图</h6>
@@ -112,7 +116,7 @@
 			<ul class="clearfix">
 				<li>
 					<a class="box_shadow" href="#">
-						<img src="img/adfull/1.jpg">
+						<img src="/static/img/adfull/1.jpg">
 						<div class="projecttitle">架构移动终端网站</div>
 						<h6>Swiper开源</h6>
 						<h6>触屏焦点图</h6>
@@ -155,11 +159,11 @@
 	<div id="leftmain">
 		<div class="swiper-container gallery-top">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image: url(img/ad/1.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(img/ad/2.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(img/ad/3.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(img/ad/4.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(img/ad/5.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url(/static/img/ad/1.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/ad/2.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/ad/3.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/ad/4.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/ad/5.jpg)"></div>
 
 			</div>
 			<!-- Add Arrows -->
@@ -168,11 +172,11 @@
 		</div>
 		<div class="swiper-container gallery-thumbs">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image:url(img/adfull/1.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(img/adfull/2.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(img/adfull/3.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(img/adfull/4.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(img/adfull/5.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/adfull/1.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/adfull/2.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/adfull/3.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/adfull/4.jpg)"></div>
+				<div class="swiper-slide" style="background-image:url(/static/img/adfull/5.jpg)"></div>
 
 			</div>
 		</div>
@@ -191,22 +195,25 @@
 			</ul>
 		</div>
 		<div id="footqrcode">
-			<img src="img/qr1.png"  >
-			<p id="imgright">扫一扫</p>
-			<img src="img/qr2.png" >
-			<p id="imgleft">扫一扫</p>
+			{% for qrcodeimg in footqrcode %}
+				<img src="{{qrcodeimg.lerfqrcode.url}}">
+				<p id="imgright">扫一扫</p>
+				<img src="{{qrcodeimg.rightqrcode.url}}">
+				<p id="imgright">扫一扫</p>
+			{% endfor %}
+		</div>
 		<div id="footwrap"></div>
 
 	</footer>
 
 </body>
 
-<script src="js/jquery.js"></script>
-<script src="js/swiper.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/swiper.js"></script>
 <!-- <script type="text/javascript" src="http://www.queness.com/js/bsa2.js"></script> -->
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/demo.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script src="/static/js/jquery.flexslider-min.js"></script>
+<script src="/static/js/demo.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
 
 <script>
     var galleryTop = new Swiper('.gallery-top', {
@@ -230,7 +237,4 @@
     galleryThumbs.controller.control = galleryTop;
 
 </script>
-
-
-
 </html>

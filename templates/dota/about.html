@@ -3,33 +3,35 @@
 <head>
 	<meta charset="utf-8">
 	<title>abot us</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/about.css">
-    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/about.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/swiper.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
     <header>
-        <div id="logo"><img src="img/1.jpg"></div>
+        <div id="logo"><img src="/static/img/1.jpg"></div>
         <div id='headtitile'>测试网站</div>
     </header>
     <nav id="nav">
         <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="about.html">我们</a></li>
-            <li><a href="new.html">动态</a></li>
-            <li><a href="team.html">团队</a></li>
-            <li><a href="culture.html">文化</a></li>
-            <li><a href="contact.html">联系</a></li>
+            <li><a href="/index">首页</a></li>
+			<li><a href="/about">我们</a></li>
+			<li><a href="/new">动态</a></li>
+			<li><a href="/team">团队</a></li>
+			<li><a href="/culture">文化</a></li>
+			<li><a href="/contact">联系</a></li>
         </ul>
     </nav>
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/ad/1.jpg"></div>
-            <div class="swiper-slide"><img src="img/ad/2.jpg"></div>
-            <div class="swiper-slide"><img src="img/ad/3.jpg"></div>
+            {% for img in aboutimg %}
+            <div class="swiper-slide"><img src="{{img.Ad_one.url}}"></div>
+            <div class="swiper-slide"><img src="{{img.Ad_two.url}}"></div>
+            <div class="swiper-slide"><img src="{{img.Ad_there.url}}"></div>
+            {% endfor %}
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -40,13 +42,13 @@
             <h2>about us</h2>
         </div>
         <div id="maincontact">
-            <div class="aboutus"><img src="img/web/address.png"></div>
+            <div class="aboutus"><img src="/static/img/web/address.png"></div>
             <h5 class="trans">地址</h5>
-            <div class="aboutus"><img src="img/web/tel.png"></div>
+            <div class="aboutus"><img src="/static/img/web/tel.png"></div>
             <h5 class="trans">电话</h5>
-            <div class="aboutus"><img src="img/web/email.png"></div>
+            <div class="aboutus"><img src="/static/img/web/email.png"></div>
             <h5 class="trans">邮箱</h5>
-            <div class="aboutus"><img src="img/web/qq.png"></div>
+            <div class="aboutus"><img src="/static/img/web/qq.png"></div>
             <h5 class="trans">咨询</h5>
 
         </div>
@@ -65,9 +67,9 @@
             </ul>
         </div>
         <div id="footqrcode">
-            <img src="img/qr1.png"  >
+            <img src="/static/img/qr1.png"  >
             <p id="imgright">扫一扫</p>
-            <img src="img/qr2.png" >
+            <img src="/static/img/qr2.png" >
             <p id="imgleft">扫一扫</p>
             <div id="footmap"></div>
 
@@ -75,9 +77,9 @@
 
 
 </body>
-	<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/swiper.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/swiper.min.js"></script>
+	<script type="text/javascript" src="/static/js/index.js"></script>
 
     <script>
         var swiper = new Swiper('.swiper-container', {

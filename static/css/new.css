@@ -25,9 +25,10 @@
 
 .trans{
     background-color: rgba(0,0,0,0);
-    border: 1.2px solid red;
+    border: 0.1px solid red;
     margin-top: 5px;
     width: 30px;
+    margin-left: 1px;
 }
 
 .nweart{

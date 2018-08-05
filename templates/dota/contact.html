@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <header>
+        <div id="logo"><img src="/static/img/1.jpg"></div>
+        <div id='headtitile'>测试网站</div>
+    </header>
+    <nav id="nav">
+        <ul>
+            <li><a href="/index">首页</a></li>
+			<li><a href="/about">我们</a></li>
+			<li><a href="/new">动态</a></li>
+			<li><a href="/team">团队</a></li>
+			<li><a href="/culture">文化</a></li>
+			<li><a href="/contact">联系</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        {% for contactinfo in contactlist %}
+        <div class="topimg"><img src="{{contactinfo.AD_one.url}}"></div>
+        <div class="article">
+            <h2 style="color:red;width: 960px;">{{contactinfo.top_title}}</h2>
+            <p >{{contactinfo.top_detail}}</p>
+            <br>
+        </div>
+        <div class="topimg">
+            <img src="{{contactinfo.AD_two.url}}">
+            <div id="submit1" class="anniu">submit1</div>
+            <div id="submit2" class="anniu">submit2</div>
+        </div>
+        <div class="article">
+            <h2 style="color:red; width: 960px;">{{contactinfo.mid_title}}</h2>
+            <p >{{contactinfo.mid_info}}</p>
+            <hr style="background-color: red;height: 1px;border: none ; margin-top: 2px">
+            <p >{{contactinfo.mid_detail}}</p>
+        </div>
+        {% endfor %}
+    </main>
+
+
+
+    <footer id="footer">
+        <div id='footnav'>
+            <ul>
+                <li><a href="#">测试链接</a></li>
+                <li><a href="#">测试链接</a></li>
+                <li><a href="#">测试链接</a></li>
+                <li><a href="#">测试链接</a></li>
+                <li><a href="#">测试链接</a></li>
+                <li><a href="#">测试链接</a></li>
+            </ul>
+        </div>
+        <div id="footqrcode">
+            <img src="/static/img/qr1.png"  >
+            <p id="imgright">扫一扫</p>
+            <img src="/static/img/qr2.png" >
+            <p id="imgleft">扫一扫</p>
+            <div id="footmap"></div>
+
+    </footer>
+</body>
+
+<script src="/static/js/jquery.js"></script>
+
+<script type="text/javascript" src="/static/js/index.js"></script>
+</html>
