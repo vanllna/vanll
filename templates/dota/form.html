@@ -10,7 +10,9 @@
         {% csrf_token %}
         <fieldset>
             <legend>commit</legend>
-            {{ form.as_p }}
+            {{ form.content }}
+            {{ form.username }}
+            {{ form.kind_choices }}
             <input type="submit" value="submit" />
         </fieldset>
     </form>

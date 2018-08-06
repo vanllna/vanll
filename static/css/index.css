@@ -447,9 +447,20 @@ footer{
 	margin-left: 20px;
 }
 
+#aboutus a{
+    text-decoration:none;
+    background-color:rgba(0,0,0,0);
+    color:red;
+}
+
 .aboutbutton:hover{
 	background-color: red;
-	color: white;
+	color:white;
+}
+
+.aboutbutton a:hover{
+
+    color:white;
 }
 
 #projects{

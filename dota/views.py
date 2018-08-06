@@ -43,7 +43,9 @@ def Form(request):
         if form.is_valid():
             moment = form.save()
             moment.save()
-            return  HttpResponseRedirect('/index/')
+            if moment.content == 'a':
+                print('content not nlll')
+                return  HttpResponseRedirect('/index/')
 
     else:
         form = MomentForm
