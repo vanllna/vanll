@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>team</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/team.css"
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/normalize.css" />
+    <link rel="stylesheet" href="/static/css/flexslider.css" />
+    <link rel="stylesheet" href="/static/css/demo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<header>
+    <div id="logo"><img src="/static/img/1.jpg"></div>
+    <div id='headtitile'>测试网站</div>
+</header>
+<nav id="nav">
+    <ul>
+			<li><a href="/index">首页</a></li>
+			<li><a href="/about">我们</a></li>
+			<li><a href="/new">动态</a></li>
+			<li><a href="/team">团队</a></li>
+			<li><a href="/culture">文化</a></li>
+			<li><a href="/contact">联系</a></li>
+    </ul>
+</nav>
+
+
+
+    <div id="teamimg">
+        {% for imginfo in teamlist %}
+        <div class="teamlist" >
+            <a href="#" style="text-decoration: none ; color: #3C3B3B;">
+            <img src="{{imginfo.teamimg.url}}">
+            <p>{{imginfo.teamdetail}}</p>
+            <div id="xian"></div>
+        </div>
+        </a>
+        {% endfor %}
+
+    </div>
+
+
+
+<footer id="footer">
+    <div id='footnav'>
+        <ul>
+            <li><a href="#">测试链接</a></li>
+            <li><a href="#">测试链接</a></li>
+            <li><a href="#">测试链接</a></li>
+            <li><a href="#">测试链接</a></li>
+            <li><a href="#">测试链接</a></li>
+        </ul>
+    </div>
+    <div id="footqrcode">
+        <img src="/static/img/qr1.png"  >
+        <p id="imgright">扫一扫</p>
+        <img src="/static/img/qr2.png" >
+        <p id="imgleft">扫一扫</p>
+        <div id="footmap"></div>
+
+</footer>
+</body>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/css/team.css"></script>
+<!-- <script type="text/javascript" src="http://www.queness.com/js/bsa2.js"></script> -->
+<script src="/static/js/jquery.flexslider-min.js"></script>
+<script src="/static/js/demo.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+</html>
