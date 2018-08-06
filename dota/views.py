@@ -1,14 +1,16 @@
 from django.shortcuts import render , HttpResponse
 from .models import *
-
+from django.http import HttpResponseRedirect
+from .form import MomentForm
 # Create your views here.
 
 def Index(request):
     indexlist = IndexModels.objects.all()
     footqrcode = Footinfo.objects.all()
     bannerlist = IndexBanner.objects.all()
+    footimg = IndexFootImg.objects.all()
     # print(indexlist)
-    return render(request,'dota/index.html',{'indexlist':indexlist,'footqrcode':footqrcode,'bannerlist':bannerlist})
+    return render(request,'dota/index.html',{'indexlist':indexlist,'footqrcode':footqrcode,'bannerlist':bannerlist,'footimg':footimg})
 
 def Aaboutus(request):
     aboutimg = AboutDetail.objects.all()
@@ -35,3 +37,14 @@ def Contact(request):
     # print(indexlist)
     return render(request,'dota/contact.html',{'contactlist':contactlist})
 
+def Form(request):
+    if request.method == 'POST':
+        form = MomentForm(request.POST)
+        if form.is_valid():
+            moment = form.save()
+            moment.save()
+            return  HttpResponseRedirect('/index/')
+
+    else:
+        form = MomentForm
+        return  render(request,'dota/form.html',{'form':form})

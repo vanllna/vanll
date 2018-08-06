@@ -157,13 +157,14 @@
 	</main>
 
 	<div id="leftmain">
+		{% for img in footimg %}
 		<div class="swiper-container gallery-top">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image: url(/static/img/ad/1.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(/static/img/ad/2.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(/static/img/ad/3.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(/static/img/ad/4.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(/static/img/ad/5.jpg)"></div>
+				<div class="swiper-slide" style="background-image: url({{img.footimg_a.url}})"></div>
+				<div class="swiper-slide" style="background-image:url({{img.footimg_b.url}})"></div>
+				<div class="swiper-slide" style="background-image:url({{img.footimg_c.url}})"></div>
+				<div class="swiper-slide" style="background-image:url({{img.footimg_d.url}})"></div>
+				<div class="swiper-slide" style="background-image:url({{img.footimg_e.url}})"></div>
 
 			</div>
 			<!-- Add Arrows -->
@@ -172,15 +173,14 @@
 		</div>
 		<div class="swiper-container gallery-thumbs">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image:url(/static/img/adfull/1.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(/static/img/adfull/2.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(/static/img/adfull/3.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(/static/img/adfull/4.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(/static/img/adfull/5.jpg)"></div>
-
+				<div class="swiper-slide" style="background-image:url({{img.footimg_a_xiao.url}})"></div>
+				<div class="swiper-slide" style="background-image:url({{img.footimg_b_xiao.url}})"></div>
+				<div class="swiper-slide" style="background-image:url({{img.footimg_c_xiao.url}})"></div>
+				<div class="swiper-slide" style="background-image:url({{img.footimg_d_xiao.url}})"></div>
+				<div class="swiper-slide" style="background-image:url({{img.footimg_e_xiao.url}})"></div>
 			</div>
 		</div>
-
+	{% endfor %}
 	</div>
 
 

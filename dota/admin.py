@@ -93,6 +93,23 @@ class IndexBannerAdmin(admin.ModelAdmin):
         }),
     )
 
+
+class IndexFootImgAdmin(admin.ModelAdmin):
+    list_display = ('footimg_a','footimg_b','footimg_c','footimg_d','footimg_e','footimg_a_xiao','footimg_b_xiao','footimg_c_xiao','footimg_d_xiao','footimg_e_xiao')
+    fieldsets = (
+        ('img',{
+           'fields':('footimg_a','footimg_b','footimg_c','footimg_d','footimg_e')
+        }),
+        ('imgdetail',{
+            'fields': ('footimg_a_xiao','footimg_b_xiao','footimg_c_xiao','footimg_d_xiao','footimg_e_xiao')
+        }),
+    )
+
+class UserKindAdmin(admin.ModelAdmin):
+    list_display = ('pk','content','username','kind_choices')
+
+
+
 admin.site.register(IndexModels,Indexinfo)
 admin.site.register(BanerImg,BanerImgAdmin)
 admin.site.register(Footinfo,FootinfoAdmin)
@@ -102,3 +119,5 @@ admin.site.register(AboutDetail,AboutAdmin)
 admin.site.register(CultuerDetaul,CultureDetailAdmin)
 admin.site.register(ContactDetail,ContactDetailAdmin)
 admin.site.register(IndexBanner,IndexBannerAdmin)
+admin.site.register(IndexFootImg,IndexFootImgAdmin)
+admin.site.register(UserKind,UserKindAdmin)

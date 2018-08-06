@@ -20,6 +20,7 @@ class BanerImg(models.Model):
     class Meta:
         verbose_name_plural = u'广告图片'
 
+
 class Footinfo(models.Model):
     lerfqrcode = models.ImageField(upload_to='qrcode/',verbose_name='左侧二维码')
     rightqrcode = models.ImageField(upload_to='qrcode/',verbose_name='后侧二维码')
@@ -99,6 +100,40 @@ class IndexBanner(models.Model):
 
     class Meta:
         verbose_name_plural = u'首页广告'
+
+
+class IndexFootImg(models.Model):
+    footimg_a = models.ImageField(upload_to='footimg/', verbose_name='底部图片1')
+    footimg_b = models.ImageField(upload_to='footimg/', verbose_name='底部图片2')
+    footimg_c = models.ImageField(upload_to='footimg/', verbose_name='底部图片3')
+    footimg_d = models.ImageField(upload_to='footimg/', verbose_name='底部图片4')
+    footimg_e = models.ImageField(upload_to='footimg/', verbose_name='底部图片5')
+    footimg_a_xiao = models.ImageField(upload_to='footimg/xiao/',verbose_name='底部广告1小图')
+    footimg_b_xiao = models.ImageField(upload_to='footimg/xiao/', verbose_name='底部广告2小图')
+    footimg_c_xiao = models.ImageField(upload_to='footimg/xiao/', verbose_name='底部广告3小图')
+    footimg_d_xiao = models.ImageField(upload_to='footimg/xiao/', verbose_name='底部广告4小图')
+    footimg_e_xiao = models.ImageField(upload_to='footimg/xiao/', verbose_name='底部广告4小图')
+
+    class Meta:
+        verbose_name_plural = u'底部广告图'
+
+
+KIND_CHOICES = (
+    ('java','java'),
+    ('php','php'),
+    ('python','pyhon'),
+    ('c++','c++'),
+)
+
+class UserKind(models.Model):
+    content = models.CharField(max_length=120,verbose_name='提交内容')
+    username = models.CharField(max_length=120,verbose_name='提交用户')
+    kind_choices = models.CharField(max_length=120,choices=KIND_CHOICES,default=KIND_CHOICES[0])
+
+    class Meta:
+        verbose_name_plural = u'用户提交信息'
+
+
 
 
 
