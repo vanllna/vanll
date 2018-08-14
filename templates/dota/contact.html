@@ -46,6 +46,31 @@
             <p >{{contactinfo.mid_detail}}</p>
         </div>
         {% endfor %}
+
+        <div>
+            <form>
+
+                <select>
+                    {% for list in areaNamelist %}
+                    <option value="{{list.areaName}}">{{list.areaName}}</option>
+                    {% endfor %}
+                </select>
+                <select>
+                    {% for list2 in level2 %}
+                    <option value="{{list2.areaName}}">{{list2.areaName}}</option>
+                    {% endfor %}
+                </select>
+                <select>
+                    {% for list3 in level3 %}
+                    <option value="{{list3.areaName}}">{{list3.areaName}}</option>
+                    {% endfor %}
+                </select>
+
+
+
+
+            </form>
+        </div>
     </main>
 
 

@@ -133,8 +133,17 @@ class UserKind(models.Model):
     class Meta:
         verbose_name_plural = u'用户提交信息'
 
+class T_Area(models.Model):
+    areaId = models.IntegerField(verbose_name='地区Id')
+    areaCode = models.CharField(max_length=20,verbose_name='地区编码')
+    areaName = models.CharField(max_length=120,verbose_name='地区名')
+    level =   models.IntegerField(verbose_name='地区级别')
+    cityCode = models.CharField(max_length=20,verbose_name='城市编码')
+    center = models.CharField(max_length=20,verbose_name='城市中心点')
+    parentId = models.IntegerField(verbose_name='地区父节点')
 
-
+    class Meta:
+        verbose_name_plural = u'城市表'
 
 
 

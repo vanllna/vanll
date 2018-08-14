@@ -34,8 +34,12 @@ def Curlture(request):
 
 def Contact(request):
     contactlist = ContactDetail.objects.all()
+    citylist = T_Area.objects.all()
+    areaNamelist = T_Area.objects.filter(level = 1)
+    level2 = T_Area.objects.filter(level=2  )
+    level3 = T_Area.objects.filter(level=3)
     # print(indexlist)
-    return render(request,'dota/contact.html',{'contactlist':contactlist})
+    return render(request,'dota/contact.html',{'contactlist':contactlist,'citylist':citylist,'areaNamelist':areaNamelist,'level2':level2,'level3':level3})
 
 def Form(request):
     if request.method == 'POST':

@@ -95,7 +95,7 @@ class IndexBannerAdmin(admin.ModelAdmin):
 
 
 class IndexFootImgAdmin(admin.ModelAdmin):
-    list_display = ('footimg_a','footimg_b','footimg_c','footimg_d','footimg_e','footimg_a_xiao','footimg_b_xiao','footimg_c_xiao','footimg_d_xiao','footimg_e_xiao')
+    list_display = ('pk','footimg_a','footimg_b','footimg_c','footimg_d','footimg_e','footimg_a_xiao','footimg_b_xiao','footimg_c_xiao','footimg_d_xiao','footimg_e_xiao')
     fieldsets = (
         ('img',{
            'fields':('footimg_a','footimg_b','footimg_c','footimg_d','footimg_e')
@@ -107,6 +107,19 @@ class IndexFootImgAdmin(admin.ModelAdmin):
 
 class UserKindAdmin(admin.ModelAdmin):
     list_display = ('pk','content','username','kind_choices')
+
+
+class T_AreaAdmin(admin.ModelAdmin):
+    list_display = ('pk','areaId','areaCode','areaName','level','cityCode','center','parentId')
+    fieldsets = (
+        ('area',{
+            'fields':('areaId','areaCode','areaName','level')
+        }),
+        ('city',{
+            'fields':('cityCode','center','parentId')
+        })
+    )
+
 
 
 
@@ -121,3 +134,4 @@ admin.site.register(ContactDetail,ContactDetailAdmin)
 admin.site.register(IndexBanner,IndexBannerAdmin)
 admin.site.register(IndexFootImg,IndexFootImgAdmin)
 admin.site.register(UserKind,UserKindAdmin)
+admin.site.register(T_Area,T_AreaAdmin)
