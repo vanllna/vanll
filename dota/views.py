@@ -2,6 +2,7 @@ from django.shortcuts import render , HttpResponse
 from .models import *
 from django.http import HttpResponseRedirect
 from .form import MomentForm
+from django.core.paginator import Paginator ,EmptyPage ,PageNotAnInteger
 # Create your views here.
 
 def Index(request):
@@ -18,9 +19,33 @@ def Aaboutus(request):
     return render(request,'dota/about.html',{'aboutimg':aboutimg})
 
 def Newinfodetail(request):
-    newlist = Newinfo.objects.all()
+    newlist = Newinfo.objects.order_by('-id')
+    #按ID 号进行排序
+    paginator = Paginator(newlist,5)
+    #每页返回多少条数据
+    page = request.GET.get('page')
+    #从前端获取当前页码数
+    try:
+        newlist = paginator.page(page)
+        #获取当前页码数的数据
+    except PageNotAnInteger:
+        newlist = paginator.page(1)
+        #如果用户输入的不是整数返回第一页的数据
+    except EmptyPage:
+        newlist = paginator.page(paginator.num_pages)
+        #如果用户输入超出最后一页 显示最后一页内容
+
     # print(indexlist)
     return render(request,'dota/new.html',{'newlist':newlist})
+
+
+
+def Newport(request,id):
+    new = Newinfo.objects.get(id = str(id))
+    #根据获取的ID 显示相应内容
+    return render(request,'dota/newport.html',{'new':new})
+
+
 
 def Teaminfodetail(request):
     teamlist = TeamInfo.objects.all()

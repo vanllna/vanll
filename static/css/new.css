@@ -24,11 +24,9 @@
 }
 
 .trans{
-<<<<<<< HEAD:static/css/new.css
+
     background-color: rgba(0,0,0,0);
-=======
-    /*background-color: rgba(0,0,0,0);*/
->>>>>>> dcf1bfbf480d54b153b53f11f02e53547a8399d1:css/new.css
+
     border: 0.1px solid red;
     margin-top: 5px;
     margin-left: 1px;
@@ -41,12 +39,22 @@
     margin-top: 16px;
     margin-bottom: 15px;
     font-size: 12px;
+    color: #2E2E2E;
+
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    padding-bottom: 0.03rem;
+
 }
 
 .newspan{
     background-color: rgba(0,0,0,0);
     margin-top: 15px;
     font-size: 12px;
+    color: #2E2E2E;
 }
 
 
@@ -63,7 +71,8 @@
 }
 
 .newtitle:hover{
-    box-shadow: 25px 5px 10px lavender;
+    box-shadow: 25px 10px 15px gainsboro;
+    transition: 600ms;
 }
 
 #new ul li a{
