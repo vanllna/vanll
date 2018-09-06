@@ -9,11 +9,10 @@ urlpatterns = [
     url(r'^about/$',views.Aaboutus),
     url(r'^new/$', views.Newinfodetail),
     url(r'newport/(\d+)/$',views.Newport),
-
     url(r'^team/$', views.Teaminfodetail),
     url(r'^culture/$', views.Curlture),
     url(r'^contact/$', views.Contact),
     url(r'^form/$',views.Form),
-
+    url(r'^imgdetail/(\d+)/$',views.Imgdetail),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -34,7 +34,7 @@
     <div id="teamimg">
         {% for imginfo in teamlist %}
         <div class="teamlist" onmousemove="my1()" onmouseleave="my2()">
-            <a href="#" style="text-decoration: none ; color: #3C3B3B; display:inline-block; height:100%;">
+            <a href="/imgdetail/{{imginfo.id}}" style="text-decoration: none ; color: #3C3B3B; display:inline-block; height:100%;">
                 <img src="{{imginfo.teamimg.url}}">
                 <p>{{imginfo.teamdetail}}</p>
                 <div id="xian"></div>

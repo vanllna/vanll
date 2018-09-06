@@ -6,6 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
     <link rel="stylesheet" type="text/css" href="/static/css/new.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .pagination li{
+            display: inline;
+
+        }
+
+    </style>
+
 </head>
 <body>
 
@@ -45,11 +53,34 @@
             </ul>
 
         </div>
+        <ul class="pagination" style=" float:left; margin-top:10px;margin-left:400px;">
+            {% if newlist.has_previous %}
+                 <li><a href="/new/?page={{ newlist.previous_page_number }}">上一页</a></li>
+           <!--直接使用方法，上一页，-->
+            {% else %}
+                <li class="disabled"><a href="#">上一页</a></li>
+            <!--//如果后面有页数就上一页 如果是最第一页页面就不跳转-->
+            {% endif %}
 
+            {% for num in newlist.paginator.page_range %}
+                <li><a href="/new/?page={{ num }}">{{ num }}</a></li>
+                <!--//当前页面页数-->
+            {% endfor %}
 
+            {% if newlist.has_next %}
+                <li><a href="/new/?page={{ newlist.next_page_number }}">下一页</a></li>
+                <!--//最后一页-->
+            {% else %}
+                <li class="disabled"><a href="#">下一页</a></li>
+                <!--//如果后面有页数就下一页 如果是最后一页页面就不跳转-->
+            {% endif %}
+      </ul>
     </div>
 
 
+
+
+       
 
     <footer id="footer">
         <div id='footnav'>

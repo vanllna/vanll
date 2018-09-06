@@ -21,7 +21,7 @@ def Aaboutus(request):
 def Newinfodetail(request):
     newlist = Newinfo.objects.order_by('-id')
     #按ID 号进行排序
-    paginator = Paginator(newlist,5)
+    paginator = Paginator(newlist,2)
     #每页返回多少条数据
     page = request.GET.get('page')
     #从前端获取当前页码数
@@ -48,9 +48,21 @@ def Newport(request,id):
 
 
 def Teaminfodetail(request):
-    teamlist = TeamInfo.objects.all()
+    teamlist = TeamInfo.objects.order_by('-id')
+    paginstor=Paginator(teamlist,10)
+    page = request.GET.get('page')
+    try:
+        teamlist = paginstor.page(page)
+    except PageNotAnInteger:
+        teamlist = paginstor.page(1)
+    except EmptyPage:
+        teamlist = paginstor.page(paginstor.num_pages)
     # print(indexlist)
     return render(request,'dota/team.html',{'teamlist':teamlist})
+
+def Imgdetail(request,id):
+    timg = TeamInfo.objects.get(id = str(id))
+    return render(request,'dota/imgdetail.html',{'timg':timg})
 
 def Curlture(request):
     culturelist = CultuerDetaul.objects.all()
@@ -79,3 +91,10 @@ def Form(request):
     else:
         form = MomentForm
         return  render(request,'dota/form.html',{'form':form})
+
+
+
+
+
+
+
